@@ -9,10 +9,11 @@ const messageSchema = mongoose.Schema({
         type: String,
         required: [true, "email is required"],
     },
-    message: {
+    contents: {
         type: String,
         required: true,
     }
 }, { Timestamp: { type: Date, default: Date.now } });
 
-const Message = mongoose.model("Massage", messageSchema)
+const Message = mongoose.model("Massage", messageSchema);
+export default Message;
